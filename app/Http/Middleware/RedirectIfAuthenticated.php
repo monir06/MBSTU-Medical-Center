@@ -18,6 +18,7 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
+<<<<<<< HEAD
         switch($guard){
             case 'admin':
                 if (Auth::guard($guard)->check()) {
@@ -30,6 +31,12 @@ class RedirectIfAuthenticated
                 }
                 break;
         }
+=======
+        if (Auth::guard($guard)->check()) {
+            return redirect(RouteServiceProvider::HOME);
+        }
+
+>>>>>>> 894e2987173b074d55382f50bb6c110b01257d71
         return $next($request);
     }
 }

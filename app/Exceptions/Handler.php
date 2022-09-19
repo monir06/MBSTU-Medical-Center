@@ -1,10 +1,16 @@
 <?php
 
 namespace App\Exceptions;
+<<<<<<< HEAD
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use Illuminate\Support\Arr;
+=======
+
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Throwable;
+>>>>>>> 894e2987173b074d55382f50bb6c110b01257d71
 
 class Handler extends ExceptionHandler
 {
@@ -53,6 +59,7 @@ class Handler extends ExceptionHandler
     {
         return parent::render($request, $exception);
     }
+<<<<<<< HEAD
 
     /**
      * @param \Illuminate\Http\Request $request
@@ -75,4 +82,6 @@ class Handler extends ExceptionHandler
         }
         return redirect()->guest(route($login));
     }
+=======
+>>>>>>> 894e2987173b074d55382f50bb6c110b01257d71
 }

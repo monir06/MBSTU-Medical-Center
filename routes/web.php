@@ -12,16 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
 
 require 'admin.php';
-=======
-
-Route::get('/', function () {
-    return view('welcome');
-});
->>>>>>> 894e2987173b074d55382f50bb6c110b01257d71

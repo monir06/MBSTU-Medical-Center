@@ -18,7 +18,7 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">My Profile</a>
                 <a class="dropdown-item" href="#">Edit Profile</a>
-                <!-- <a class="dropdown-item" href="settings.html">Settings</a> -->
+                <a class="dropdown-item" href="{{ route('admin.settings') }}">Settings</a>
                 <a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a>
             </div>
         </li>

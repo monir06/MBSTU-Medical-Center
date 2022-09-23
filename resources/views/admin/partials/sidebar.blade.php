@@ -3,8 +3,8 @@
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
                 <li class="menu-title">Panel</li>
-                <li class="active">
-                    <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                <li class="{{ Route::currentRouteName() == 'admin.dashboard' ? 'active' : '' }}">
+                    <a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
                 </li>
                 <li>
                     <a href="doctors.html"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
@@ -27,8 +27,8 @@
                 <li>
                     <a href="#"><i class="fa fa-envelope"></i> <span> Contact Box</span></a>
                 </li>
-                <li>
-                    <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                <li class="{{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}">
+                    <a href="{{ route('admin.settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                 </li>
             </ul>
         </div>

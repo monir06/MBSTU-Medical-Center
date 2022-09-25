@@ -37,28 +37,6 @@
                     value="{{ config('settings.default_email_address') }}"
                 />
             </div>
-            <div class="form-group">
-                <label class="control-label" for="currency_code">Currency Code</label>
-                <input
-                    class="form-control"
-                    type="text"
-                    placeholder="Enter store currency code"
-                    id="currency_code"
-                    name="currency_code"
-                    value="{{ config('settings.currency_code') }}"
-                />
-            </div>
-            <div class="form-group">
-                <label class="control-label" for="currency_symbol">Currency Symbol</label>
-                <input
-                    class="form-control"
-                    type="text"
-                    placeholder="Enter store currency symbol"
-                    id="currency_symbol"
-                    name="currency_symbol"
-                    value="{{ config('settings.currency_symbol') }}"
-                />
-            </div>
         </div>
         <div class="tile-footer">
             <div class="row d-print-none mt-2">

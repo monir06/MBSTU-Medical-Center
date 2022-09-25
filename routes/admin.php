@@ -12,9 +12,24 @@ Route::group(['middleware' => ['auth:admin']], function () {
         return view('admin.dashboard.index');
     })->name('admin.dashboard');
 
+    // settings routes
     Route::get('/settings', 'Admin\SettingController@index')->name('admin.settings');
     Route::post('/settings', 'Admin\SettingController@update')->name('admin.settings.update');
 
+    // doctors routes
+    Route::group(['prefix' => 'doctors'], function () {
+ 
+        Route::get('/', 'Admin\DoctorController@index')->name('admin.doctors.index');
+        Route::get('/create', 'Admin\DoctorController@create')->name('admin.doctors.create');
+        Route::get('/{id}/show', 'Admin\DoctorController@show')->name('admin.doctors.show');
+        Route::post('/store', 'Admin\DoctorController@store')->name('admin.doctors.store');
+        Route::get('/edit/{id}', 'Admin\DoctorController@edit')->name('admin.doctors.edit');
+        Route::post('/{id}/update', 'Admin\DoctorController@update')->name('admin.doctors.update');
+        Route::get('/{id}/delete', 'Admin\DoctorController@delete')->name('admin.doctors.delete');
+        Route::get('/{id}/mail', 'Admin\DoctorController@mail')->name('admin.doctors.mail');
+        Route::post('/{id}/mail/submit', 'Admin\DoctorController@SubmitMail')->name('admin.doctors.sendmail');
+        Route::get('/status/update', 'Admin\DoctorController@updateStatus')->name('admin.doctors.update.status');
+     });
 });
 
 });

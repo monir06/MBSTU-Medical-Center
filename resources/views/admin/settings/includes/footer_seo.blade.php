@@ -19,7 +19,7 @@
                 <input
                     class="form-control"
                     type="text"
-                    placeholder="Enter seo meta title for store"
+                    placeholder="Enter seo meta title"
                     id="seo_meta_title"
                     name="seo_meta_title"
                     value="{{ config('settings.seo_meta_title') }}"
@@ -30,7 +30,7 @@
                 <textarea
                     class="form-control"
                     rows="4"
-                    placeholder="Enter seo meta description for store"
+                    placeholder="Enter seo meta description"
                     id="seo_meta_description"
                     name="seo_meta_description"
                 >{{ config('settings.seo_meta_description') }}</textarea>

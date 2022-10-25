@@ -15,7 +15,7 @@
                 <section class="invoice">
                     <div class="row mb-4">
                         <div class="col-6">
-                            <h3 class="page-header"><i class="fa fa-user"></i> {{ $doctors->title }}{{ $doctors->name }} </h3>
+                            <h3 class="page-header"><i class="fa fa-user"></i> {{ $doctors->title }} {{ $doctors->name }} </h3>
                         </div>
                         <div class="col-6">
                             <h5 class="text-right">Created at: {{ $doctors->created_at->toFormattedDateString() }}</h5>

@@ -51,11 +51,11 @@ class SettingController extends BaseController
         } else {
  
             $keys = $request->except('_token');
- 
             foreach ($keys as $key => $value)
             {
                 Setting::set($key, $value);
             }
+            // dd($keys);
         }
         return $this->responseRedirectBack('Settings updated successfully.', 'success');
     }

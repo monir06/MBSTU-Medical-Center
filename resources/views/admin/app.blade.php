@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/img/favicon.ico') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/font-awesome.min.css') }}" />
@@ -24,5 +25,6 @@
     {{-- <script src="{{ asset('backend/js/Chart.bundle.js') }}"></script> --}}
     {{-- <script src="{{ asset('backend/js/chart.js') }}"></script> --}}
     <script src="{{ asset('backend/js/app.js') }}"></script>
+    @stack('scripts')
 </body>
 </html>

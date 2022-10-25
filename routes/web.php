@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Auth::routes();
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::view('/', 'site.pages.homepage');
 require 'admin.php';
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+
+Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');

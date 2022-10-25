@@ -30,4 +30,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+
+        'client_id' => '180364440029-otnah9q37qc1p143pjn4arm6bt5kvs23.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://medical.mbstu.ac.bd/auth/google/callback',
+    ],
+
 ];

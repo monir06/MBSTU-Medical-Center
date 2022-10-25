@@ -13,7 +13,7 @@ class DoctorController extends BaseController
 {
     public function index()
     {
-        $doctors = Doctor::orderBy('id', 'desc')->paginate(10);
+        $doctors = Doctor::orderBy('id', 'desc')->paginate(8);
         $this->setPageTitle('Doctors', 'List of all Doctors');
         return view('admin.doctors.index', compact('doctors'));
     }

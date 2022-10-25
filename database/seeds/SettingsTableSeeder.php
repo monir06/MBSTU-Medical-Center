@@ -15,7 +15,7 @@ class SettingsTableSeeder extends Seeder
         ],
         [
             'key'                       =>  'site_title',
-            'value'                     =>  'MBSTU Medical Centre',
+            'value'                     =>  'University Online Medical Portal',
         ],
         [
             'key'                       =>  'default_email_address',
@@ -57,14 +57,14 @@ class SettingsTableSeeder extends Seeder
             'key'                       =>  'social_linkedin',
             'value'                     =>  '',
         ],
-        [
-            'key'                       =>  'google_analytics',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'facebook_pixels',
-            'value'                     =>  '',
-        ],
+        // [
+        //     'key'                       =>  'google_analytics',
+        //     'value'                     =>  '',
+        // ],
+        // [
+        //     'key'                       =>  'facebook_pixels',
+        //     'value'                     =>  '',
+        // ],
     ];
     
     /**

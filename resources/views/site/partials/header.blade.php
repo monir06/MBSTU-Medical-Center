@@ -46,11 +46,7 @@
             <div class="banner-text text-center">
               <h1 class="white">Healthcare at your fingertips!!</h1>
               <p>The medical centre of MBSTU is equipped with necessary instruments and doctor to provide appropriate <br> health care to the students and it is always ready to face any sudden situation.</p>
-              @guest
-                <a href="{{ url('auth/google') }}" class="btn btn-appoint">Make an Appointment.</a>
-              @else
-                <a href="#" class="btn btn-appoint">Make an Appointment.</a>
-              @endguest
+                <a href="{{ route('request.index') }}" class="btn btn-appoint">Make an Appointment.</a>
             </div>
             @guest
             <div class="overlay-detail text-center">

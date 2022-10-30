@@ -27,4 +27,5 @@ Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback')
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/request', 'Site\AppointmentRequestController@getAppointment')->name('request.index');
     Route::post('/request/appointment', 'Site\AppointmentRequestController@placeRequest')->name('appointment.place.request');
+    Route::get('/request/appointment/list', 'Site\AppointmentRequestController@getAppointmentList')->name('appointment.list.index');
 });

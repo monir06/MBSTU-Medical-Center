@@ -12,8 +12,8 @@
                 <li>
                     <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
                 </li>
-                <li>
-                    <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
+                <li class="{{ Route::currentRouteName() == 'admin.appointments.index' ? 'active' : '' }}">
+                    <a href="{{ route('admin.appointments.index') }}"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
                 </li>
                 <li>
                     <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>

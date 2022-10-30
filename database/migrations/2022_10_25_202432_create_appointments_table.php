@@ -16,18 +16,18 @@ class CreateAppointmentsTable extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('appointment_number')->unique();
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->enum('status', ['pending', 'processing', 'completed', 'decline'])->default('pending');
             $table->string('name');
             $table->string('email');
             $table->string('s_id');
-            $table->string('dept');
-            $table->string('session');
-            $table->string('dormitory');
+            $table->string('dept')->nullable();
+            $table->string('session')->nullable();
+            $table->string('dormitory')->nullable();
             $table->string('phone');
-            $table->string('birthdate');
-            $table->string('blood_group');
+            $table->string('birthdate')->nullable();
+            $table->string('blood_group')->nullable();
             $table->string('date');
             $table->string('time');
             $table->text('notes')->nullable();

@@ -1,5 +1,5 @@
 @extends('site.app')
-@section('title', 'Checkout')
+@section('title', 'Request Appointment')
 @section('content')
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/bootstrap.min.css') }}" /> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/font-awesome.min.css') }}" /> --}}

@@ -30,6 +30,15 @@ Route::group(['middleware' => ['auth:admin']], function () {
         Route::post('/{id}/mail/submit', 'Admin\DoctorController@SubmitMail')->name('admin.doctors.sendmail');
         Route::get('/status/update', 'Admin\DoctorController@updateStatus')->name('admin.doctors.update.status');
      });
+
+     // appointment routes
+     Route::group(['prefix' => 'appointments'], function () {
+        Route::get('/', 'Admin\AppointmentController@index')->name('admin.appointments.index');
+        Route::get('/{appointment}/show', 'Admin\AppointmentController@show')->name('admin.appointments.show');
+        Route::get('/{id}/delete', 'Admin\AppointmentController@delete')->name('admin.appointments.delete');
+        Route::get('/update/{id}/status/{value}', 'Admin\AppointmentController@update')->name('admin.appointments.update');
+        Route::get('/create', 'Admin\AppointmentController@create')->name('admin.appointments.create');
+     });
 });
 
 });

@@ -100,8 +100,8 @@
 @endsection
 @push('scripts')
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script type="text/javascript" src="{{ asset('backend/js/plugins/jquery.dataTables.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('backend/js/plugins/dataTables.bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('backend/js/dataTables.bootstrap.min.js') }}"></script>
 <script type="text/javascript">
     $('#sampleTable').DataTable();
 </script>

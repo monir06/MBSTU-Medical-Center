@@ -39,6 +39,21 @@ Route::group(['middleware' => ['auth:admin']], function () {
         Route::get('/update/{id}/status/{value}', 'Admin\AppointmentController@update')->name('admin.appointments.update');
         Route::get('/create', 'Admin\AppointmentController@create')->name('admin.appointments.create');
      });
+
+     // user routes
+     Route::group(['prefix' => 'users'], function () {
+ 
+        Route::get('/', 'Admin\UserController@index')->name('admin.users.index');
+        Route::get('/create', 'Admin\UserController@create')->name('admin.users.create');
+        Route::get('/{id}/show', 'Admin\UserController@show')->name('admin.users.show');
+        Route::post('/store', 'Admin\UserController@store')->name('admin.users.store');
+        Route::get('/edit/{id}', 'Admin\UserController@edit')->name('admin.users.edit');
+        Route::post('/{id}/update', 'Admin\UserController@update')->name('admin.users.update');
+        Route::get('/{id}/delete', 'Admin\UserController@delete')->name('admin.users.delete');
+        Route::get('/{id}/mail', 'Admin\UserController@mail')->name('admin.users.mail');
+        Route::post('/{id}/mail/submit', 'Admin\UserController@SubmitMail')->name('admin.users.sendmail');
+        Route::get('/status/update', 'Admin\UserController@updateStatus')->name('admin.users.update.status');
+     });
 });
 
 });

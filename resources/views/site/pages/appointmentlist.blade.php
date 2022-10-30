@@ -1,12 +1,23 @@
-@extends('site.app')
+@extends('site.apphome')
 @section('title', 'Appointment List')
 @section('content')
 <section id="about" class="section-padding">
     <div class="container">
+        
         <div class="row">
             @if (Session::has('message'))
             <div class="alert alert-info">{{ Session::get('message') }}</div>
             @endif
+        </div>
+        <div class="row app-title">
+            <div class="col-lg-12">
+            <div class="col-lg-8">
+                <h3><i class="fa fa-tags"></i> Appointment List</h3>
+            </div>
+            <div class="col-lg-4">
+                <a href="{{ route('request.index') }}" class="btn btn-primary pull-right">Request Appointment</a>
+            </div>
+            </div>
         </div>
         <div class="row">
             <main class="col-sm-12">
@@ -29,7 +40,17 @@
                                 <td>{{ $appointment->phone }}</td>
                                 <td>{{ $appointment->date }}</td>
                                 <td>{{ $appointment->time }}</td>
-                                <td><span class="badge badge-success">{{ strtoupper($appointment->status) }}</span></td>
+                                <td>
+                                    @if ($appointment->status === 'pending')
+                                            <span class="label label-default">{{ucfirst(trans($appointment->status))}}</span>
+                                        @elseif ($appointment->status === 'processing')
+                                            <span class="label label-info">{{ucfirst(trans($appointment->status))}}</span>
+                                        @elseif ($appointment->status === 'completed')
+                                            <span class="label label-success">{{ucfirst(trans($appointment->status))}}</span>
+                                        @else
+                                            <span class="label label-danger">{{ucfirst(trans($appointment->status))}}d</span>
+                                        @endif
+                                </td>
                             </tr>
                         @empty
                             <div class="col-sm-12">

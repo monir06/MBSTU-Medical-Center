@@ -9,8 +9,8 @@
                 <li class="{{ Route::currentRouteName() == 'admin.doctors.index' ? 'active' : '' }}">
                     <a href="{{ route('admin.doctors.index') }}"><i class="fa fa-user-md"></i> <span>Doctors</span></a>
                 </li>
-                <li>
-                    <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
+                <li class="{{ Route::currentRouteName() == 'admin.users.index' ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.index') }}"><i class="fa fa-wheelchair"></i> <span>Patients</span></a>
                 </li>
                 <li class="{{ Route::currentRouteName() == 'admin.appointments.index' ? 'active' : '' }}">
                     <a href="{{ route('admin.appointments.index') }}"><i class="fa fa-calendar"></i> <span>Appointments</span></a>

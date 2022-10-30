@@ -14,7 +14,7 @@ class AppointmentController extends BaseController
     }
     public function index()
     {
-        $appointments = Appointment::orderBy('id', 'desc')->get();
+        $appointments = Appointment::orderBy('id', 'desc')->paginate(10);
         // $appointments = $appointments->reverse();
         $this->setPageTitle('Appointments', 'List of all Appointments');
         return view('admin.appointments.index', compact('appointments'));

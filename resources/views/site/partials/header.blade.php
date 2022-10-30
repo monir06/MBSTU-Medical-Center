@@ -59,4 +59,4 @@
     </div>
   </section>
   <!--/ banner-->
-  @include('site.partials.nav')
+  {{-- @include('site.partials.nav') --}}

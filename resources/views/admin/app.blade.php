@@ -21,7 +21,7 @@
     <script src="{{ asset('backend/js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ asset('backend/js/popper.min.js') }}"></script>
     <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
-    {{-- <script src="{{ asset('backend/js/jquery.slimscroll.js') }}"></script> --}}
+    <script src="{{ asset('backend/js/jquery.slimscroll.js') }}"></script>
     {{-- <script src="{{ asset('backend/js/Chart.bundle.js') }}"></script> --}}
     {{-- <script src="{{ asset('backend/js/chart.js') }}"></script> --}}
     <script src="{{ asset('backend/js/app.js') }}"></script>

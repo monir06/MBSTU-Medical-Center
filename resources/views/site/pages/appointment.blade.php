@@ -1,4 +1,4 @@
-@extends('site.app')
+@extends('site.apphome')
 @section('title', 'Request Appointment')
 @section('content')
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/bootstrap.min.css') }}" /> --}}

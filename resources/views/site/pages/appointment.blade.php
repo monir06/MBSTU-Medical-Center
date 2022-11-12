@@ -27,12 +27,14 @@
                             </div>
                         </div> 
                     </div> --}}
+                    {{-- <input type="hidden" name="s_id" value="{{ auth()->user()->s_id }}" readonly=""> --}}
+                    {{-- <input type="hidden" name="session" value="{{ auth()->user()->session }}" readonly=""> --}}
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Date</label>
                                 <div class="cal-icon">
-                                    <input type="text" name="date" class="form-control datetimepicker">
+                                    <input type="text" name="date" class="form-control datetimepicker" required>
                                 </div>
                             </div>
                         </div>
@@ -40,14 +42,15 @@
                             <div class="form-group">
                                 <label>Time</label>
                                 <div class="time-icon">
-                                    <input type="text" name="time" class="form-control" id="datetimepicker3">
+                                    <input type="text" name="time" class="form-control" id="datetimepicker3" required>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Contact Number</label>
-                                <input type="text" class="form-control" name="phone">
+                                <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone">
+                                @error('phone') {{ $message }} @enderror
                             </div>
                         </div>
                     </div>
@@ -55,8 +58,9 @@
                     <div class="row">
                         <div class="col-md-12">
                         <div class="form-group">
-                        <label>Message</label>
-                        <textarea cols="50" rows="4" class="form-control" name="notes"></textarea>
+                        <label>Primary Symptoms</label>
+                        <input type="text" class="form-control @error('notes') is-invalid @enderror" name="notes" placeholder="Fever/Cold/Headache/Acidity....">
+                                @error('notes') {{ $message }} @enderror
                         </div>
                         </div>
                     </div>

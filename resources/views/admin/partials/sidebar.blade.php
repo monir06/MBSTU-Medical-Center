@@ -15,7 +15,7 @@
                 <li class="{{ Route::currentRouteName() == 'admin.appointments.index' ? 'active' : '' }}">
                     <a href="{{ route('admin.appointments.index') }}"><i class="fa fa-calendar"></i> <span>Appointments</span></a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Doctor Schedule</span></a>
                 </li>
                 <li>
@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-envelope"></i> <span> Contact Box</span></a>
-                </li>
+                </li> --}}
                 <li class="{{ Route::currentRouteName() == 'admin.settings' ? 'active' : '' }}">
                     <a href="{{ route('admin.settings') }}"><i class="fa fa-cog"></i> <span>Settings</span></a>
                 </li>

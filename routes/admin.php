@@ -8,9 +8,7 @@ Route::get('logout', 'Admin\LoginController@logout')->name('admin.logout');
 
 Route::group(['middleware' => ['auth:admin']], function () {
 
-    Route::get('/', function () {
-        return view('admin.dashboard.index');
-    })->name('admin.dashboard');
+    Route::get('/', 'Admin\DashboardController@index')->name('admin.dashboard');
 
     // settings routes
     Route::get('/settings', 'Admin\SettingController@index')->name('admin.settings');

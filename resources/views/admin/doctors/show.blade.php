@@ -25,7 +25,7 @@
                         <div class="col-4">Details<hr>
                             <address><b>Title:</b> {{ $doctors->title }}<br><b>Name:</b> {{ $doctors->name }}<br><b>Email:</b> {{ $doctors->email }}</address>
                         </div>
-                        <div class="col-4">Address<hr>
+                        <div class="col-4">Contact<hr>
                             <address><b>Address: </b>{{ $doctors->address }}<br><b>District:</b> {{ $doctors->district }}<br><b>Phone:</b> {{ $doctors->phone }}<br></address>
                         </div>
                         <div class="col-4">

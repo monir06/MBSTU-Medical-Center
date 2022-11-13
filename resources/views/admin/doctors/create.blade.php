@@ -47,6 +47,11 @@
                             @error('phone') {{ $message }} @enderror
                         </div>
                         <div class="form-group">
+                            <label class="control-label" for="degree">Degree</label>
+                            <input class="form-control @error('degree') is-invalid @enderror" type="text" name="degree" id="degree" value="{{ old('degree') }}"/>
+                            @error('degree') {{ $message }} @enderror
+                        </div>
+                        <div class="form-group">
                             <label class="control-label" for="address">Address</label>
                             <input class="form-control @error('address') is-invalid @enderror" type="text" name="address" id="address" value="{{ old('address') }}"/>
                             @error('address') {{ $message }} @enderror

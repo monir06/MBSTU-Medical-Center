@@ -20,7 +20,7 @@
               <ul class="quick-info">
                 <li><a href="{{ url('/') }}"><i class="fa fa-circle"></i>Home</a></li>
                 <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
+                <li><a href="{{ route('appointment.list.index') }}"><i class="fa fa-circle"></i>Appointment</a></li>
               </ul>
             </div>
           </div>

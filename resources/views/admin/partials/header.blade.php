@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-left">
-        <a href="index.html" class="logo">
+        <a href="{{ route('admin.dashboard') }}" class="logo">
             <img src="{{ asset('backend/img/logo.png') }}" width="35" height="35" alt="">
         </a>
     </div>
